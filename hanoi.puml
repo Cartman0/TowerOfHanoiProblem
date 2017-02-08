@@ -1,0 +1,13 @@
+@startuml
+partition "Hanoi(k, start, p, goal)"  {
+  start
+  if (k >=1 ?) then (Yes)
+    :Hanoi(k-1, start, goal, p)|
+    :k段目をstart -> goalへ移動/
+    :Hanoi(k-1, p, start, goal)|
+  else (No)
+   stop
+  endif
+   stop
+   }
+@enduml
